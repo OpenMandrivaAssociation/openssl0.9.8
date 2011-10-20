@@ -65,7 +65,7 @@ and protocols, including DES, RC4, RSA and SSL.
 
 %prep
 
-%setup -q -n openssl%{version}
+%setup -q -n openssl-%{version}
 %patch1 -p1 -b .ia64-asm
 %patch2 -p0 -b .optflags
 %patch3 -p1 -b .lib64
