@@ -3,7 +3,7 @@
 
 %if %mandriva_branch == Cooker
 # Cooker
-%define release %mkrel 2
+%define release %mkrel 1
 %else
 # Old distros
 %define subrel 1
@@ -12,7 +12,7 @@
 
 Summary:	Secure Sockets Layer communications libs & utils
 Name:		openssl%{maj}
-Version:	%{maj}r
+Version:	%{maj}t
 Release:        %{release}
 License:	BSD-like
 Group:		System/Libraries
@@ -168,4 +168,3 @@ rm -fr %{buildroot}
 %attr(0755,root,root) %{_libdir}/lib*.so.*
 %attr(0755,root,root) %dir %{_libdir}/openssl-%{maj}/engines
 %attr(0755,root,root) %{_libdir}/openssl-%{maj}/engines/*.so
-
