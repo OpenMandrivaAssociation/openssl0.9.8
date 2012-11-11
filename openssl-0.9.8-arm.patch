@@ -1,0 +1,13 @@
+--- Configure	2011-10-18 10:40:02.248724141 +0200
++++ Configure.oden	2011-10-18 10:40:54.161724138 +0200
+@@ -380,6 +380,10 @@
+ "linux-mips64",   "gcc:-mabi=64 \$(RPM_OPT_FLAGS) -DB_ENDIAN -DTERMIO -O3 -g -Wall::-D_REENTRANT::-ldl:BN_LLONG RC2_CHAR RC4_INDEX DES_INT DES_UNROLL DES_RISC2::::::::::::dlfcn:linux-shared:-fPIC::.so.\$(SHLIB_MAJOR).\$(SHLIB_MINOR)",
+ "linux-mips64el",   "gcc:-mabi=64 \$(RPM_OPT_FLAGS) -DL_ENDIAN -DTERMIO -O3 -g -Wall::-D_REENTRANT::-ldl:BN_LLONG RC2_CHAR RC4_INDEX DES_INT DES_UNROLL DES_RISC2::::::::::::dlfcn:linux-shared:-fPIC::.so.\$(SHLIB_MAJOR).\$(SHLIB_MINOR)",
+ 
++#### Arm Linux setups
++"linux-arm",   "gcc:\$(RPM_OPT_FLAGS) -DL_ENDIAN -DTERMIO -O3 -g -Wall::-D_REENTRANT::-ldl:BN_LLONG RC2_CHAR RC4_INDEX DES_INT DES_UNROLL DES_RISC2::::::::::::dlfcn:linux-shared:-fPIC::.so.\$(SHLIB_MAJOR).\$(SHLIB_MINOR)",
++"linux-armel",   "gcc:\$(RPM_OPT_FLAGS) -DL_ENDIAN -DTERMIO -O3 -g -Wall::-D_REENTRANT::-ldl:BN_LLONG RC2_CHAR RC4_INDEX DES_INT DES_UNROLL DES_RISC2::::::::::::dlfcn:linux-shared:-fPIC::.so.\$(SHLIB_MAJOR).\$(SHLIB_MINOR)",
++
+ # Android: Linux but without -DTERMIO and pointers to headers and libs.
+ "android","gcc:-mandroid -I\$(ANDROID_DEV)/include -B\$(ANDROID_DEV)/lib -O3 -fomit-frame-pointer -Wall::-D_REENTRANT::-ldl:BN_LLONG RC4_CHAR RC4_CHUNK DES_INT DES_UNROLL BF_PTR:${no_asm}:dlfcn:linux-shared:-fPIC::.so.\$(SHLIB_MAJOR).\$(SHLIB_MINOR)",
+ 

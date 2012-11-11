@@ -1,0 +1,116 @@
+--- openssl-0.9.6b/ssl/s3_lib.c.mdkconfig	Fri Mar  9 11:08:04 2001
++++ openssl-0.9.6b/ssl/s3_lib.c	Tue Dec  4 17:44:27 2001
+@@ -204,6 +204,7 @@
+ 	SSL_ALL_STRENGTHS,
+ 	},
+ /* Cipher 1B */
++#if 0
+ 	{
+ 	1,
+ 	SSL3_TXT_ADH_DES_192_CBC_SHA,
+@@ -216,6 +217,7 @@
+ 	SSL_ALL_CIPHERS,
+ 	SSL_ALL_STRENGTHS,
+ 	},
++#endif
+ 
+ /* RSA again */
+ /* Cipher 03 */
+@@ -310,6 +312,7 @@
+ 	SSL_ALL_STRENGTHS,
+ 	},
+ /* Cipher 0A */
++#if 0
+ 	{
+ 	1,
+ 	SSL3_TXT_RSA_DES_192_CBC3_SHA,
+@@ -322,6 +325,7 @@
+ 	SSL_ALL_CIPHERS,
+ 	SSL_ALL_STRENGTHS,
+ 	},
++#endif
+ 
+ /*  The DH ciphers */
+ /* Cipher 0B */
+@@ -351,6 +355,7 @@
+ 	SSL_ALL_STRENGTHS,
+ 	},
+ /* Cipher 0D */
++#if 0
+ 	{
+ 	0,
+ 	SSL3_TXT_DH_DSS_DES_192_CBC3_SHA,
+@@ -363,6 +368,7 @@
+ 	SSL_ALL_CIPHERS,
+ 	SSL_ALL_STRENGTHS,
+ 	},
++#endif
+ /* Cipher 0E */
+ 	{
+ 	0,
+@@ -390,6 +396,7 @@
+ 	SSL_ALL_STRENGTHS,
+ 	},
+ /* Cipher 10 */
++#if 0
+ 	{
+ 	0,
+ 	SSL3_TXT_DH_RSA_DES_192_CBC3_SHA,
+@@ -402,6 +409,7 @@
+ 	SSL_ALL_CIPHERS,
+ 	SSL_ALL_STRENGTHS,
+ 	},
++#endif
+ 
+ /* The Ephemeral DH ciphers */
+ /* Cipher 11 */
+@@ -431,6 +439,7 @@
+ 	SSL_ALL_STRENGTHS,
+ 	},
+ /* Cipher 13 */
++#if 0
+ 	{
+ 	1,
+ 	SSL3_TXT_EDH_DSS_DES_192_CBC3_SHA,
+@@ -443,6 +452,7 @@
+ 	SSL_ALL_CIPHERS,
+ 	SSL_ALL_STRENGTHS,
+ 	},
++#endif
+ /* Cipher 14 */
+ 	{
+ 	1,
+@@ -470,6 +480,7 @@
+ 	SSL_ALL_STRENGTHS,
+ 	},
+ /* Cipher 16 */
++#if 0
+ 	{
+ 	1,
+ 	SSL3_TXT_EDH_RSA_DES_192_CBC3_SHA,
+@@ -482,6 +493,7 @@
+ 	SSL_ALL_CIPHERS,
+ 	SSL_ALL_STRENGTHS,
+ 	},
++#endif
+ 
+ /* Fortezza */
+ /* Cipher 1C */
+--- openssl-0.9.6b/ssl/s2_lib.c.mdkconfig	Tue Dec 26 13:06:47 2000
++++ openssl-0.9.6b/ssl/s2_lib.c	Tue Dec  4 17:54:13 2001
+@@ -162,6 +162,7 @@
+ 	SSL_ALL_STRENGTHS,
+ 	},
+ /* DES_192_EDE3_CBC_WITH_MD5 */
++#if 0
+ 	{
+ 	1,
+ 	SSL2_TXT_DES_192_EDE3_CBC_WITH_MD5,
+@@ -174,6 +175,7 @@
+ 	SSL_ALL_CIPHERS,
+ 	SSL_ALL_STRENGTHS,
+ 	},
++#endif
+ /* RC4_64_WITH_MD5 */
+ #if 1
+ 	{

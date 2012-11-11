@@ -1,0 +1,39 @@
+--- Configure	2011-10-18 10:29:50.452724196 +0200
++++ Configure.oden	2011-10-18 10:31:23.069724180 +0200
+@@ -593,6 +593,7 @@
+ my $prefix="";
+ my $libdir="";
+ my $openssldir="";
++my $enginesdir="";
+ my $exe_ext="";
+ my $install_prefix= "$ENV{'INSTALL_PREFIX'}";
+ my $cross_compile_prefix="";
+@@ -840,6 +841,10 @@
+ 				{
+ 				$openssldir=$1;
+ 				}
++			elsif (/^--enginesdir=(.*)$/)
++				{
++				$enginesdir=$1;
++				}
+ 			elsif (/^--install.prefix=(.*)$/)
+ 				{
+ 				$install_prefix=$1;
+@@ -1114,7 +1119,7 @@
+ 
+ $openssldir=$prefix . "/ssl" if $openssldir eq "";
+ $openssldir=$prefix . "/" . $openssldir if $openssldir !~ /(^\/|^[a-zA-Z]:[\\\/])/;
+-
++$enginesdir="$prefix/lib/engines" if $enginesdir eq "";
+ 
+ print "IsMK1MF=$IsMK1MF\n";
+ 
+@@ -1699,7 +1704,7 @@
+ 		# $foo is to become "$prefix/lib$multilib/engines";
+ 		# as Makefile.org and engines/Makefile are adapted for
+ 		# $multilib suffix.
+-		my $foo = "$prefix/lib/engines";
++		my $foo = "$enginesdir";
+ 		$foo =~ s/\\/\\\\/g;
+ 		print OUT "#define ENGINESDIR \"$foo\"\n";
+ 		}
