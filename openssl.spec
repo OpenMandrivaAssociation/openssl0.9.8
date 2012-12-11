@@ -168,3 +168,30 @@ rm -fr %{buildroot}
 %attr(0755,root,root) %{_libdir}/lib*.so.*
 %attr(0755,root,root) %dir %{_libdir}/openssl-%{maj}/engines
 %attr(0755,root,root) %{_libdir}/openssl-%{maj}/engines/*.so
+
+
+%changelog
+* Fri May 11 2012 Oden Eriksson <oeriksson@mandriva.com> 0.9.8x-1mdv2012.0
++ Revision: 798208
+- 0.9.8x
+
+* Tue Apr 24 2012 Oden Eriksson <oeriksson@mandriva.com> 0.9.8w-1
++ Revision: 793114
+- 0.9.8w
+
+* Tue Mar 13 2012 Oden Eriksson <oeriksson@mandriva.com> 0.9.8u-1
++ Revision: 784666
+- 0.9.8u
+
+* Thu Jan 19 2012 Oden Eriksson <oeriksson@mandriva.com> 0.9.8t-1
++ Revision: 762529
+- 0.9.8t
+
+* Thu Oct 20 2011 Oden Eriksson <oeriksson@mandriva.com> 0.9.8r-2
++ Revision: 705506
+- fix bork
+- import openssl0.9.8
+
+
+* Tue Oct 18 2011 Oden Eriksson <oeriksson@mandriva.com> 0.9.8r-1mdv2010.2
+- initial Mandriva package
