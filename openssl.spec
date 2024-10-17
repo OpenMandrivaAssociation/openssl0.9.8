@@ -16,7 +16,7 @@ Version:	%{maj}x
 Release:        %{release}
 License:	BSD-like
 Group:		System/Libraries
-URL:		http://www.openssl.org/
+URL:		https://www.openssl.org/
 Source0:	ftp://ftp.openssl.org/source/openssl-%{version}.tar.gz
 Source1:	ftp://ftp.openssl.org/source/openssl-%{version}.tar.gz.asc
 # (gb) 0.9.6b-5mdk: Limit available SSL ciphers to 128 bits
