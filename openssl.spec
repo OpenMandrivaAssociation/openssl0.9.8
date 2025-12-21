@@ -43,6 +43,7 @@ Patch16:	pkcs11_engine-0.9.8i.diff
 # MIPS and ARM support
 Patch300:	openssl-0.9.8-mips.patch
 Patch301:	openssl-0.9.8-arm.patch
+BuildRequires:	make
 BuildRequires:	chrpath
 BuildRequires:	zlib-devel
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
